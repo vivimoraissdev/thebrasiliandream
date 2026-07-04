@@ -41,17 +41,17 @@ export function Offer() {
 
               <div className="space-y-4 mb-8">
                 {[
-                  "O sistema de 4 pilares que substitui anos de cursinho por 30 minutos por dia",
-                  "O passo a passo para criar sua bolha de imersão artificial – sem precisar morar fora",
-                  "A técnica do \"Pause\" com séries que fixa vocabulário muito mais rápido que apostila",
-                  "O método musical em 4 passos para calibrar seu ouvido e entender nativos de verdade",
-                  "Estratégias de fala para destravar a vergonha: Shadowing, treino com IA e como usar chats internacionais de graça",
-                  "O Desafio de 30 Dias: um cronograma prático, dia a dia, que cabe na rotina de quem trabalha e estuda"
+                  { title: "Sistema de 4 Pilares", desc: "Substitui anos de cursinho por 30 minutos diários." },
+                  { title: "Bolha de Imersão", desc: "Mergulhe no idioma sem precisar morar fora." },
+                  { title: "Técnica do \"Pause\"", desc: "Fixe vocabulário com séries muito mais rápido que apostilas." },
+                  { title: "Método Musical", desc: "4 passos rápidos para calibrar seu ouvido com nativos." },
+                  { title: "Destrave a Fala", desc: "Estratégias de Shadowing e treino com IA grátis." },
+                  { title: "Desafio 30 Dias", desc: "Cronograma prático para quem trabalha e estuda." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#FFB800] shrink-0 mt-0.5" />
                     <p className="text-sm md:text-base text-slate-300 leading-snug font-medium">
-                      {item}
+                      <strong className="text-white">{item.title}:</strong> {item.desc}
                     </p>
                   </div>
                 ))}
@@ -64,15 +64,15 @@ export function Offer() {
                 </h3>
                 <div className="space-y-3 relative z-10">
                   {[
-                    "Checklist do Desafio de 30 Dias – para você marcar cada passo e não perder o ritmo",
-                    "Guia de Configuração de Algoritmo – para transformar seu Instagram e YouTube em máquinas de aprendizado",
-                    "Lista de criadores gringos por nicho – curadoria pronta para você seguir e consumir conteúdo real desde o dia 1",
-                    "Acesso a um grupo de conversação exclusivo no WhatsApp – com uma condição especial por tempo limitado. Lá dentro, o português é proibido, você pratica com outros alunos e tem acompanhamento semanal ao vivo. (Vagas limitadas, só vale para quem garantir agora.)"
+                    { title: "Checklist 30 Dias", desc: "Marque cada passo e não perca o ritmo." },
+                    { title: "Guia de Algoritmo", desc: "Transforme redes sociais em máquinas de estudo." },
+                    { title: "Criadores Gringos", desc: "Curadoria pronta para consumir conteúdo real." },
+                    { title: "Grupo no WhatsApp", desc: "Prática exclusiva sem português (Vagas limitadas)." }
                   ].map((bonus, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 md:w-5 md:h-5 text-[#E6A600] shrink-0 mt-0.5" />
                       <p className="text-sm md:text-base text-slate-200 leading-snug font-medium">
-                        {bonus}
+                        <strong className="text-white">{bonus.title}:</strong> {bonus.desc}
                       </p>
                     </div>
                   ))}

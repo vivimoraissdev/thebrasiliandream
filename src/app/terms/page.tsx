@@ -17,11 +17,11 @@ export default function Terms() {
         <h1 className="text-3xl font-bold text-white mb-6">Termos de Uso</h1>
         <div className="space-y-6 text-sm leading-relaxed text-slate-400">
           <p>
-            Bem-vindo ao Trabalhe na Gringa. Ao acessar nosso site e adquirir nossos materiais, você concorda em cumprir e ser regido pelos seguintes termos e condições de uso.
+            Bem-vindo ao The Brasilian Dream. Ao acessar nosso site e adquirir nossos materiais, você concorda em cumprir e ser regido pelos seguintes termos e condições de uso.
           </p>
           <h2 className="text-xl text-white font-semibold mt-8 mb-4">1. Uso do Conteúdo</h2>
           <p>
-            Todo o conteúdo presente neste site, incluindo o guia "Trabalhe na Gringa" e os bônus oferecidos, é de propriedade exclusiva e protegido por leis de direitos autorais. Você não pode reproduzir, distribuir ou revender o material sem nossa autorização expressa.
+            Todo o conteúdo presente neste site, incluindo o Ebook Fluência Autodidata e os bônus oferecidos, é de propriedade exclusiva e protegido por leis de direitos autorais. Você não pode reproduzir, distribuir ou revender o material sem nossa autorização expressa.
           </p>
           <h2 className="text-xl text-white font-semibold mt-8 mb-4">2. Garantia de Satisfação</h2>
           <p>

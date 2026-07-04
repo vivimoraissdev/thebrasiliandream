@@ -13,7 +13,7 @@ export function Problem() {
               <Image 
                 src={dolarRealImg} 
                 alt="Dólares" 
-                className="w-full max-w-md h-auto object-contain drop-shadow-2xl"
+                className="w-full max-w-md lg:max-w-xl xl:max-w-2xl h-auto object-contain drop-shadow-2xl"
               />
             </div>
           </div>

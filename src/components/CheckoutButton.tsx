@@ -9,14 +9,19 @@ interface CheckoutButtonProps {
 }
 
 export function CheckoutButton({ children, className, sectionName }: CheckoutButtonProps) {
-  const CHECKOUT_LINK = "#";
+  const CHECKOUT_LINK = "#offer";
   
   const handleCheckoutClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'click_checkout', { section: sectionName });
     }
-    window.location.href = CHECKOUT_LINK;
+    
+    if (CHECKOUT_LINK.startsWith('#')) {
+      document.querySelector(CHECKOUT_LINK)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = CHECKOUT_LINK;
+    }
   };
 
   return (

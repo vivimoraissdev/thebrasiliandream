@@ -17,7 +17,7 @@ export default function Privacy() {
         <h1 className="text-3xl font-bold text-white mb-6">Política de Privacidade</h1>
         <div className="space-y-6 text-sm leading-relaxed text-slate-400">
           <p>
-            A sua privacidade é importante para nós. É política do Trabalhe na Gringa respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site Trabalhe na Gringa e outros sites que possuímos e operamos.
+            A sua privacidade é importante para nós. É política da The Brasilian Dream respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site The Brasilian Dream e outros sites que possuímos e operamos.
           </p>
           <h2 className="text-xl text-white font-semibold mt-8 mb-4">1. Coleta de Dados</h2>
           <p>
