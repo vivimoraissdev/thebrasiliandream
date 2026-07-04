@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Termos de Uso | Guia Trabalhe na Gringa',
-  description: 'Termos de uso do Guia Trabalhe na Gringa.',
+  title: 'Termos de Uso | Fluência Autodidata',
+  description: 'Termos de uso do Fluência Autodidata.',
 };
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-[#0B1220] text-slate-300 font-sans p-8">
       <div className="max-w-3xl mx-auto bg-[#071426] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
-        <Link href="/" className="inline-flex items-center text-[#00C853] hover:text-[#00E65F] mb-8 font-medium transition-colors">
+        <Link href="/" className="inline-flex items-center text-[#FFB800] hover:text-[#E6A600] mb-8 font-medium transition-colors">
           &larr; Voltar para a página inicial
         </Link>
         <h1 className="text-3xl font-bold text-white mb-6">Termos de Uso</h1>
@@ -33,7 +33,7 @@ export default function Terms() {
           </p>
           <h2 className="text-xl text-white font-semibold mt-8 mb-4">4. Suporte</h2>
           <p>
-            Para dúvidas e solicitações de reembolso, por favor entre em contato através do nosso email oficial: suporte@trabalhenagringa.com.br.
+            Para dúvidas e solicitações de reembolso, por favor entre em contato através do nosso email oficial: suporte@vivimoraiss.com.
           </p>
         </div>
       </div>

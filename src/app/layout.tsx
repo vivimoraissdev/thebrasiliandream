@@ -3,22 +3,22 @@ import './globals.css';
 import { Analytics } from '@/components/Analytics';
 
 export const metadata: Metadata = {
-  title: 'Guia: Trabalhe na Gringa | Victoria Morais',
-  description: 'Descubra como Victoria Morais conseguiu um emprego internacional morando no Brasil e receba em dólar trabalhando de casa.',
-  keywords: ['Trabalhe na Gringa', 'Victoria Morais', 'Vagas Internacionais', 'Home Office', 'Inglês', 'Emprego Internacional'],
-  authors: [{ name: 'Victoria Morais' }],
-  metadataBase: new URL('https://trabalhe-na-gringa.vercel.app'),
+  title: 'Fluência Autodidata | Vivi Morais',
+  description: 'Descubra como destravar sua fala em inglês por conta própria, usando imersão diária e shadowing, sem depender de professores caros.',
+  keywords: ['Fluência Autodidata', 'Vivi Morais', 'The Brasilian Dream', 'Aprender Inglês', 'Inglês Sozinho', 'Shadowing', 'Falar Inglês'],
+  authors: [{ name: 'Vivi Morais' }],
+  metadataBase: new URL('https://thebrasiliandream.com.br'),
   openGraph: {
-    title: 'Guia Trabalhe na Gringa | Receba em dólar morando no Brasil',
-    description: 'Aprenda o passo a passo validado para conseguir uma vaga remota internacional e ganhar em moeda forte sem sair de casa.',
-    url: 'https://trabalhe-na-gringa.vercel.app/',
-    siteName: 'Guia Trabalhe na Gringa',
+    title: 'Fluência Autodidata | Vivi Morais',
+    description: 'Destrave sua comunicação em inglês sem depender de cursinhos ou professores particulares.',
+    url: 'https://thebrasiliandream.com.br/',
+    siteName: 'The Brasilian Dream',
     images: [
       {
         url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Capa do Guia Trabalhe na Gringa com stacks de Dólares e Reais.',
+        alt: 'Capa do ebook Fluência Autodidata por Vivi Morais.',
       },
     ],
     locale: 'pt_BR',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Receba em dólar morando no Brasil | Guia Completo',
-    description: 'O passo a passo para acessar vagas remotas internacionais sem precisar emigrar.',
+    title: 'Fluência Autodidata | Vivi Morais',
+    description: 'Destrave sua fala em inglês no seu próprio ritmo.',
     images: ['/opengraph-image.jpg'],
   },
   icons: {
@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className="bg-[#0B1220] font-sans text-slate-200 selection:bg-[#00C853]/30 selection:text-white overflow-x-hidden">
+      <body className="bg-[#0B1220] font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white overflow-x-hidden">
         {children}
         <Analytics />
       </body>

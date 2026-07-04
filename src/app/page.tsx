@@ -13,7 +13,7 @@ import { MobileStickyCTA } from '@/components/MobileStickyCTA';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B1220] font-sans text-slate-200 selection:bg-[#00C853]/30 selection:text-white overflow-hidden">
+    <main className="min-h-screen bg-[#0B1220] font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white overflow-hidden">
       <Hero />
       <Why />
       <Interest />
