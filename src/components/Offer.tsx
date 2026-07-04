@@ -8,10 +8,10 @@ export function Offer() {
   return (
     <section id="offer" className="py-16 md:py-24 lg:min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#071426] to-[#0B1220] border-b border-white/5 relative">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-center max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mx-auto">
           
           <div className="lg:w-5/12 w-full flex justify-center mb-6 lg:mb-0">
-            <div className="relative w-full max-w-sm md:max-w-md">
+            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
               {/* Back glow for Mockup */}
               <div className="absolute inset-0 bg-[#FFB800]/20 blur-[80px] rounded-full z-0"></div>
               <Image 
@@ -39,7 +39,7 @@ export function Offer() {
                 O Que Você Leva com Este Ebook:
               </h2>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4 mb-6">
                 {[
                   { title: "Sistema de 4 Pilares", desc: "Substitui anos de cursinho por 30 minutos diários." },
                   { title: "Bolha de Imersão", desc: "Mergulhe no idioma sem precisar morar fora." },
@@ -62,12 +62,12 @@ export function Offer() {
                 <h3 className="text-lg md:text-xl font-bold text-[#FFB800] mb-4 flex items-center gap-2 relative z-10">
                   🎁 Bônus especial para os primeiros compradores
                 </h3>
-                <div className="space-y-3 relative z-10">
+                <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4 relative z-10">
                   {[
                     { title: "Checklist 30 Dias", desc: "Marque cada passo e não perca o ritmo." },
                     { title: "Guia de Algoritmo", desc: "Transforme redes sociais em máquinas de estudo." },
                     { title: "Criadores Gringos", desc: "Curadoria pronta para consumir conteúdo real." },
-                    { title: "Grupo no WhatsApp", desc: "Prática exclusiva sem português (Vagas limitadas)." }
+                    { title: "Acesso Exclusivo", desc: "Condição especial no Grupo de Conversação do WhatsApp." }
                   ].map((bonus, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 md:w-5 md:h-5 text-[#E6A600] shrink-0 mt-0.5" />
@@ -80,18 +80,21 @@ export function Offer() {
               </div>
 
               <div className="bg-[#0B1220] rounded-2xl p-6 lg:p-8 text-center border border-white/5 shadow-inner">
-                <p className="text-slate-400 mb-1 text-sm md:text-base">Valor total estimado de tudo que você vai receber:</p>
-                <p className="text-slate-500 mb-4 line-through text-lg font-medium">R$ 297,00</p>
-                
-                <p className="text-white font-bold text-base md:text-lg mb-5 bg-[#FFB800]/10 inline-block px-4 py-1 rounded-full border border-[#FFB800]/20">Mas durante o lançamento de acesso inicial:</p>
-                
-                <div className="flex flex-col items-center justify-center mb-6">
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-2xl md:text-3xl font-bold text-slate-400">R$</span>
-                    <span className="text-6xl md:text-7xl font-extrabold text-[#FFB800] drop-shadow-[0_0_20px_rgba(255,184,0,0.3)]">97,00</span>
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                  <div className="text-center md:text-left">
+                    <p className="text-slate-400 mb-1 text-sm md:text-base">Valor total estimado:</p>
+                    <p className="text-slate-500 mb-3 line-through text-lg font-medium">R$ 297,00</p>
+                    <p className="text-white font-bold text-sm md:text-base bg-[#FFB800]/10 inline-block px-3 py-1 rounded-full border border-[#FFB800]/20">Acesso inicial:</p>
                   </div>
-                  <p className="text-white font-black text-xl md:text-2xl mt-1 tracking-wide uppercase">à vista</p>
-                  <p className="text-slate-400 font-medium text-base md:text-lg mt-3 bg-white/5 px-4 py-1 rounded-full">ou 12x de R$ 9,68</p>
+                  
+                  <div className="flex flex-col items-center md:items-end">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-2xl md:text-3xl font-bold text-slate-400">R$</span>
+                      <span className="text-5xl md:text-6xl font-extrabold text-[#FFB800] drop-shadow-[0_0_20px_rgba(255,184,0,0.3)]">97,00</span>
+                    </div>
+                    <p className="text-white font-black text-lg md:text-xl mt-1 tracking-wide uppercase">à vista</p>
+                    <p className="text-slate-400 font-medium text-sm md:text-base mt-2 bg-white/5 px-3 py-1 rounded-full">ou 12x de R$ 9,68</p>
+                  </div>
                 </div>
                 
                 <CheckoutButton 
