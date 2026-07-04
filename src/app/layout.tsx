@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className="bg-[#0B1220] font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white overflow-x-hidden">
+      <body className="bg-[#0B1220] font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white">
         {children}
         <Analytics />
       </body>
