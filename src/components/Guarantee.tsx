@@ -18,7 +18,7 @@ export function Guarantee() {
           <div className="md:w-2/3 text-center md:text-left space-y-4">
             <h3 className="text-3xl font-bold text-white">Risco Zero: Garantia Incondicional de 7 Dias</h3>
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              Você tem 7 dias de garantia incondicional. Acesse o guia, leia o material e veja o passo a passo por dentro. Se decidir que o meu caminho não é para você, basta solicitar e seu investimento será 100% reembolsado.
+              Se em 7 dias você não sentir que o método destrava sua fala, devolvemos 100% do seu investimento.
             </p>
             
             <div className="pt-6">

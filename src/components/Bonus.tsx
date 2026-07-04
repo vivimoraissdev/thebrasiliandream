@@ -31,12 +31,12 @@ export function Bonus() {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 md:w-14 md:h-14 bg-[#071426] border border-white/10 rounded-xl flex items-center justify-center shrink-0">
-                    <div className="text-[#00C853]">{bonus.icon}</div>
+                    <div className="text-[#FFB800]">{bonus.icon}</div>
                   </div>
                   <h4 className="text-lg font-bold text-white md:hidden">{bonus.title}</h4>
                 </div>
                 <div className="md:hidden">
-                  <ChevronDown className={`w-5 h-5 text-[#00C853] transition-transform duration-300 ${openBonus === i ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-[#FFB800] transition-transform duration-300 ${openBonus === i ? 'rotate-180' : ''}`} />
                 </div>
               </div>
               

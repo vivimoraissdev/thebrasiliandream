@@ -12,10 +12,10 @@ export function Interest() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-            O interesse que esse assunto gerou
+            A necessidade real das pessoas
           </h2>
           <p className="text-xl text-slate-400 font-light">
-            Quando compartilhei minha história, não esperava a repercussão que ela teria.
+            Quando compartilhei como destravei o meu inglês, não imaginava que tantas pessoas passavam pelo mesmo bloqueio.
           </p>
         </div>
 
@@ -30,29 +30,29 @@ export function Interest() {
         {/* Estatísticas Virais */}
         <div className="max-w-5xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
           <div className="flex flex-col items-center justify-center space-y-2">
-            <Heart className="w-8 h-8 text-[#00C853] mb-2" />
+            <Heart className="w-8 h-8 text-[#FFB800] mb-2" />
             <span className="text-3xl lg:text-4xl font-bold text-white">+14.000</span>
             <span className="text-sm text-slate-400 font-medium uppercase tracking-widest">Curtidas</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-2">
-            <MessageCircle className="w-8 h-8 text-[#00C853] mb-2" />
+            <MessageCircle className="w-8 h-8 text-[#FFB800] mb-2" />
             <span className="text-3xl lg:text-4xl font-bold text-white">+530</span>
             <span className="text-sm text-slate-400 font-medium uppercase tracking-widest">Comentários</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-2">
-            <MessageSquare className="w-8 h-8 text-[#00C853] mb-2" />
+            <MessageSquare className="w-8 h-8 text-[#FFB800] mb-2" />
             <span className="text-3xl lg:text-4xl font-bold text-white">Centenas</span>
             <span className="text-sm text-slate-400 font-medium uppercase tracking-widest">de Mensagens Privadas</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-2">
-            <Share2 className="w-8 h-8 text-[#00C853] mb-2" />
+            <Share2 className="w-8 h-8 text-[#FFB800] mb-2" />
             <span className="text-3xl lg:text-4xl font-bold text-white">Milhares</span>
-            <span className="text-sm text-slate-400 font-medium uppercase tracking-widest">de Pessoas Querendo Aprender</span>
+            <span className="text-sm text-slate-400 font-medium uppercase tracking-widest">de Pessoas Querendo Destravar</span>
           </div>
         </div>
       </div>
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
-        <a href="#problem" className="text-[#00C853] hover:text-[#00E65F] transition-colors" aria-label="Próxima seção">
+        <a href="#problem" className="text-[#FFB800] hover:text-[#E6A600] transition-colors" aria-label="Próxima seção">
           <ChevronDown className="w-10 h-10 animate-bounce" />
         </a>
       </div>

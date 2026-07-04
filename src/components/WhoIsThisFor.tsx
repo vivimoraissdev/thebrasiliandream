@@ -8,30 +8,30 @@ export function WhoIsThisFor() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-            A pergunta que mais recebo é simples: <br /> <span className="text-[#00C853]">"Mas isso funciona para mim?"</span>
+            A pergunta que mais recebo é simples: <br /> <span className="text-[#FFB800]">"Mas esse método funciona para mim?"</span>
           </h2>
           <p className="text-lg text-slate-400 font-medium">
-            E a minha resposta é: <span className="text-[#00C853]">"Você quer ganhar em dólar trabalhando de casa?"</span>
+            E a minha resposta é: <span className="text-[#FFB800]">"Você já entende inglês mas trava na hora de falar?"</span>
           </p>
         </div>
 
         <div className="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mt-8">
           
           {/* Box 1 - É para você */}
-          <div className="bg-slate-800/60 border border-emerald-500/30 rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl relative">
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-8 bg-[#00C853] text-[#0B1220] px-5 py-1.5 rounded-full font-bold text-sm shadow-[0_0_20px_rgba(0,200,83,0.3)] whitespace-nowrap">
+          <div className="bg-slate-800/60 border border-yellow-500/30 rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl relative">
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-8 bg-[#FFB800] text-[#0B1220] px-5 py-1.5 rounded-full font-bold text-sm shadow-[0_0_20px_rgba(255,184,0,0.3)] whitespace-nowrap">
               É para você se:
             </div>
             <ul className="space-y-3 md:space-y-4 mt-4">
               {[
-                "Já tem experiência profissional (qualquer área)",
-                "Quer ganhar em moeda forte",
-                "Quer trabalhar remotamente",
-                "Está cansado do mercado brasileiro",
-                "Quer construir carreira internacional"
+                "Já entende inglês mas trava na hora de falar",
+                "Tem vergonha do próprio sotaque",
+                "Precisa de inglês para crescer na carreira",
+                "Não quer pagar cursinhos caros",
+                "Quer destravar a fala por conta própria"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00C853] shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#FFB800] shrink-0" />
                   <span className="text-white font-medium text-base">{item}</span>
                 </li>
               ))}
@@ -45,11 +45,11 @@ export function WhoIsThisFor() {
             </div>
             <ul className="space-y-3 md:space-y-4 mt-4">
               {[
-                "Ser programador",
                 "Morar fora do Brasil",
-                "Falar inglês perfeito",
-                "Ter feito intercâmbio",
-                "Ter diploma internacional"
+                "Pagar professores particulares nativos",
+                "Falar 'perfeito' sem sotaque",
+                "Fazer intercâmbio caríssimo",
+                "Ter talento natural para idiomas"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <Circle className="w-4 h-4 text-slate-500 shrink-0" strokeWidth={3} />
@@ -66,11 +66,11 @@ export function WhoIsThisFor() {
             </div>
             <ul className="space-y-3 md:space-y-4 mt-4">
               {[
-                "Quer dinheiro rápido",
-                "Acredita que vai ganhar dinheiro sem se candidatar a vagas",
-                "Não quer passar por processos seletivos",
-                "Não quer estudar nem se preparar para entrevistas",
-                "Espera resultado sem ação"
+                "Quer fluência mágica em 7 dias",
+                "Acha que vai aprender sem praticar",
+                "Não quer se dedicar um pouco todo dia",
+                "Quer apenas focar em gramática de livros",
+                "Espera resultado sem consistência"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <X className="w-5 h-5 text-red-500/70 shrink-0" strokeWidth={3} />
@@ -86,9 +86,9 @@ export function WhoIsThisFor() {
           <p className="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed">
             Você não precisa descobrir tudo sozinho.
             <span className="text-white font-bold block mt-3">
-              Eu organizei o caminho que eu gostaria de ter seguido.
+              Eu organizei o exato passo a passo que destravou meu inglês.
             </span>
-            <span className="text-[#00C853] font-bold block mt-4">
+            <span className="text-[#FFB800] font-bold block mt-4">
               Veja tudo o que você vai receber:
             </span>
           </p>
@@ -96,7 +96,7 @@ export function WhoIsThisFor() {
 
       </div>
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
-        <a href="#offer" className="text-[#00C853] hover:text-[#00E65F] transition-colors" aria-label="Próxima seção">
+        <a href="#offer" className="text-[#FFB800] hover:text-[#E6A600] transition-colors" aria-label="Próxima seção">
           <ChevronDown className="w-10 h-10 animate-bounce" />
         </a>
       </div>
