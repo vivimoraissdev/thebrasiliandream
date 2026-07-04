@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description: 'Descubra como destravar sua fala em inglês por conta própria, usando imersão diária e shadowing, sem depender de professores caros.',
   keywords: ['Fluência Autodidata', 'Vivi Morais', 'The Brasilian Dream', 'Aprender Inglês', 'Inglês Sozinho', 'Shadowing', 'Falar Inglês'],
   authors: [{ name: 'Vivi Morais' }],
-  metadataBase: new URL('https://thebrasiliandream.com.br'),
+  metadataBase: new URL('https://thebrasiliandream.vercel.app'),
   openGraph: {
     title: 'Fluência Autodidata | Vivi Morais',
     description: 'Destrave sua comunicação em inglês sem depender de cursinhos ou professores particulares.',
-    url: 'https://thebrasiliandream.com.br/',
+    url: 'https://thebrasiliandream.vercel.app/',
     siteName: 'The Brasilian Dream',
     images: [
       {
