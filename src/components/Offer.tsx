@@ -6,7 +6,7 @@ import mockupGringaImg from '../assets/mockup-gringa.png';
 
 export function Offer() {
   return (
-    <section id="offer" className="py-16 md:py-24 lg:min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#071426] to-[#0B1220] border-b border-white/5 relative">
+    <section id="offer" className="py-16 md:py-20 lg:py-10 flex flex-col justify-center bg-gradient-to-b from-[#071426] to-[#0B1220] border-b border-white/5 relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mx-auto">
           
@@ -23,23 +23,23 @@ export function Offer() {
           </div>
 
           <div className="lg:w-7/12 w-full">
-            <div className="bg-[#071426] border border-white/10 rounded-3xl p-5 md:p-10 shadow-2xl relative">
+            <div className="bg-[#071426] border border-white/10 rounded-3xl p-5 md:p-8 lg:p-6 xl:p-8 shadow-2xl relative">
               
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFB800] text-[#0B1220] px-6 py-2 rounded-full font-bold text-sm uppercase tracking-widest shadow-lg whitespace-nowrap">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFB800] text-[#0B1220] px-6 py-1.5 md:py-2 rounded-full font-bold text-sm uppercase tracking-widest shadow-lg whitespace-nowrap">
                 Oferta Especial de Lançamento
               </div>
 
-              <div className="text-center mb-6 mt-4 md:mt-0">
-                <p className="text-white font-medium text-base md:text-lg leading-snug bg-white/5 p-4 rounded-xl border border-white/10">
+              <div className="text-center mb-4 mt-4 md:mt-2 lg:mt-0">
+                <p className="text-white font-medium text-base leading-snug bg-white/5 p-3 rounded-xl border border-white/10">
                   <strong className="text-[#FFB800]">Mais que um ebook</strong>, isso é o método completo que funcionou na prática (e não é teoria).
                 </p>
               </div>
 
-              <h2 className="text-xl md:text-2xl font-extrabold text-white mb-5 text-center">
+              <h2 className="text-xl md:text-2xl font-extrabold text-white mb-3 lg:mb-4 text-center">
                 O Que Você Leva com Este Ebook:
               </h2>
 
-              <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4 mb-6">
+              <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:gap-y-3 mb-5">
                 {[
                   { title: "Sistema de 4 Pilares", desc: "Substitui anos de cursinho por 30 minutos diários." },
                   { title: "Bolha de Imersão", desc: "Mergulhe no idioma sem precisar morar fora." },
@@ -57,12 +57,12 @@ export function Offer() {
                 ))}
               </div>
 
-              <div className="bg-[#FFB800]/10 border border-[#FFB800]/30 rounded-2xl p-5 md:p-6 mb-8 shadow-inner relative overflow-hidden">
+              <div className="bg-[#FFB800]/10 border border-[#FFB800]/30 rounded-2xl p-5 md:p-5 lg:p-4 xl:p-5 mb-5 shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFB800]/20 blur-3xl rounded-full"></div>
-                <h3 className="text-lg md:text-xl font-bold text-[#FFB800] mb-4 flex items-center gap-2 relative z-10">
+                <h3 className="text-base md:text-lg lg:text-xl font-bold text-[#FFB800] mb-3 flex items-center gap-2 relative z-10">
                   🎁 Bônus especial para os primeiros compradores
                 </h3>
-                <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4 relative z-10">
+                <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:gap-y-3 relative z-10">
                   {[
                     { title: "Checklist 30 Dias", desc: "Marque cada passo e não perca o ritmo." },
                     { title: "Guia de Algoritmo", desc: "Transforme redes sociais em máquinas de estudo." },
@@ -79,31 +79,31 @@ export function Offer() {
                 </div>
               </div>
 
-              <div className="bg-[#0B1220] rounded-2xl p-6 lg:p-8 text-center border border-white/5 shadow-inner">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+              <div className="bg-[#0B1220] rounded-2xl p-5 lg:p-6 xl:p-7 text-center border border-white/5 shadow-inner">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-3 mb-4 lg:mb-5">
                   <div className="text-center md:text-left">
-                    <p className="text-slate-400 mb-1 text-sm md:text-base">Valor total estimado:</p>
-                    <p className="text-slate-500 mb-3 line-through text-lg font-medium">R$ 297,00</p>
-                    <p className="text-white font-bold text-sm md:text-base bg-[#FFB800]/10 inline-block px-3 py-1 rounded-full border border-[#FFB800]/20">Acesso inicial:</p>
+                    <p className="text-slate-400 mb-0.5 text-sm md:text-base">Valor total estimado:</p>
+                    <p className="text-slate-500 mb-2 lg:mb-3 line-through text-base md:text-lg font-medium">R$ 297,00</p>
+                    <p className="text-white font-bold text-sm bg-[#FFB800]/10 inline-block px-3 py-1 rounded-full border border-[#FFB800]/20">Acesso inicial:</p>
                   </div>
                   
                   <div className="flex flex-col items-center md:items-end">
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <span className="text-2xl md:text-3xl font-bold text-slate-400">R$</span>
+                    <div className="flex items-baseline gap-1.5 md:gap-2 mb-1">
+                      <span className="text-xl md:text-2xl lg:text-3xl font-bold text-slate-400">R$</span>
                       <span className="text-5xl md:text-6xl font-extrabold text-[#FFB800] drop-shadow-[0_0_20px_rgba(255,184,0,0.3)]">97,00</span>
                     </div>
-                    <p className="text-white font-black text-lg md:text-xl mt-1 tracking-wide uppercase">à vista</p>
-                    <p className="text-slate-400 font-medium text-sm md:text-base mt-2 bg-white/5 px-3 py-1 rounded-full">ou 12x de R$ 9,68</p>
+                    <p className="text-white font-black text-lg md:text-xl mt-0.5 tracking-wide uppercase">à vista</p>
+                    <p className="text-slate-400 font-medium text-xs md:text-sm mt-1 bg-white/5 px-3 py-0.5 md:py-1 rounded-full">ou 12x de R$ 9,68</p>
                   </div>
                 </div>
                 
                 <CheckoutButton 
                   sectionName="offer"
-                  className="block w-full px-4 py-5 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-xl transition-all duration-300 text-lg md:text-xl transform hover:-translate-y-1 shadow-[0_0_30px_rgba(255,184,0,0.3)] hover:shadow-[0_0_50px_rgba(255,184,0,0.5)]"
+                  className="block w-full px-4 py-4 md:py-5 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-xl transition-all duration-300 text-lg md:text-xl transform hover:-translate-y-1 shadow-[0_0_30px_rgba(255,184,0,0.3)] hover:shadow-[0_0_50px_rgba(255,184,0,0.5)]"
                 >
                   QUERO DESTRAVAR MINHA FALA HOJE
                 </CheckoutButton>
-                <p className="text-xs md:text-sm text-slate-400 mt-4 font-medium flex flex-wrap justify-center gap-x-3 gap-y-2">
+                <p className="text-xs text-slate-400 mt-3 md:mt-4 font-medium flex flex-wrap justify-center gap-x-3 gap-y-2">
                   <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-[#FFB800]"/> Compra 100% segura</span>
                   <span className="flex items-center gap-1"><Zap className="w-4 h-4 text-[#FFB800]"/> Download imediato após a compra</span>
                   <span className="flex items-center gap-1"><Laptop className="w-4 h-4 text-[#FFB800]"/> Acesso vitalício</span>
