@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
-import victoriaHistoryImg from '../assets/victoria-history.png';
+import victoriaHistoryImg from '../assets/victoria-history.jpg';
 
 export function History() {
   return (
