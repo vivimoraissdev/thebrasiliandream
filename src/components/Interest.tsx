@@ -31,7 +31,7 @@ export function Interest() {
         <div className="max-w-5xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 backdrop-blur-sm grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-2 md:gap-8 text-center">
           <div className="flex flex-col items-center justify-start space-y-1 md:space-y-2">
             <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#FFB800] mb-1 md:mb-2" />
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">+14.000</span>
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">+16.000</span>
             <span className="text-[10px] md:text-xs lg:text-sm text-slate-400 font-medium uppercase tracking-widest">Curtidas</span>
           </div>
           <div className="flex flex-col items-center justify-start space-y-1 md:space-y-2 border-l border-white/10 pl-2 md:pl-0">
