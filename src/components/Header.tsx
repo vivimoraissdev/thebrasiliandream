@@ -8,11 +8,11 @@ export function Header() {
     <header className="bg-[#071426]/90 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
         <Link href="/" className="flex items-center group transition-transform hover:scale-[1.02] bg-white rounded-full overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.15)] max-w-[75vw]">
-          <div className="relative w-52 max-w-full h-12 md:w-80 md:h-[4.5rem] lg:w-96 lg:h-20 flex items-center justify-center">
+          <div className="relative w-64 max-w-full h-16 md:w-[22rem] md:h-20 lg:w-[28rem] lg:h-24 flex items-center justify-center">
             <Image 
               src={logoImg} 
               alt="The Brasilian Dream Logo" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               quality={100}
               priority={true}
             />

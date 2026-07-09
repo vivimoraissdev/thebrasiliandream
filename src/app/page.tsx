@@ -14,9 +14,10 @@ import { Header } from '@/components/Header';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B1220] font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white">
+    <>
       <Header />
-      <Hero />
+      <main className="min-h-screen bg-[#0B1220] overflow-x-hidden font-sans text-slate-200 selection:bg-[#FFB800]/30 selection:text-white">
+        <Hero />
       <Why />
       <Interest />
       <Problem />
@@ -28,6 +29,7 @@ export default function Home() {
       <CTA />
       <Footer />
       <MobileStickyCTA />
-    </main>
+      </main>
+    </>
   );
 }
