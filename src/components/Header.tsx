@@ -12,7 +12,9 @@ export function Header() {
             <Image 
               src={logoImg} 
               alt="The Brasilian Dream Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
+              quality={100}
+              priority={true}
             />
           </div>
         </Link>
