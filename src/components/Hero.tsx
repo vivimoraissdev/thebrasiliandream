@@ -14,7 +14,7 @@ export function Hero() {
   }, []);
 
   return (
-    <header id="hero" className="relative py-16 md:py-24 lg:min-h-screen flex items-center border-b border-white/5">
+    <header id="hero" className="relative py-16 md:py-24 lg:min-h-screen flex items-center border-b border-white/5 overflow-hidden">
       {/* Abstract Dark Background Elements */}
       <div className="absolute inset-0 z-0 bg-[#0B1220] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#071426] via-[#0B1220] to-[#0B1220]"></div>
       <div className="absolute inset-0 z-0 opacity-20 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>

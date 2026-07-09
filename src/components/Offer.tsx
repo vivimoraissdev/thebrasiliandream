@@ -6,7 +6,7 @@ import mockupGringaImg from '../assets/mockup-gringa.png';
 
 export function Offer() {
   return (
-    <section id="offer" className="py-16 md:py-20 lg:py-6 xl:py-8 flex flex-col justify-center bg-gradient-to-b from-[#071426] to-[#0B1220] border-b border-white/5 relative">
+    <section id="offer" className="py-16 md:py-20 lg:py-6 xl:py-8 flex flex-col justify-center bg-gradient-to-b from-[#071426] to-[#0B1220] border-b border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mx-auto">
           

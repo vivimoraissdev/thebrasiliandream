@@ -5,7 +5,7 @@ import secureCheckoutImg from '../assets/seguro.png';
 
 export function Guarantee() {
   return (
-    <section id="guarantee" className="flex flex-col justify-center py-16 bg-[#071426] border-t border-white/5 relative">
+    <section id="guarantee" className="flex flex-col justify-center py-16 bg-[#071426] border-t border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/3 flex justify-center">

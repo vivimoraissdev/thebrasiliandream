@@ -5,7 +5,7 @@ import dolarRealImg from '../assets/dolar-real.png';
 
 export function Problem() {
   return (
-    <section id="problem" className="py-16 md:py-24 lg:min-h-screen flex flex-col justify-center bg-slate-950 relative">
+    <section id="problem" className="py-16 md:py-24 lg:min-h-screen flex flex-col justify-center bg-slate-950 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
