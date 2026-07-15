@@ -67,6 +67,7 @@ export function Hero() {
                   src={victoriaHeroImg}
                   alt="Victoria Morais - História Real" 
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-1000 opacity-95"
                 />
               </div>

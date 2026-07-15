@@ -15,6 +15,7 @@ export function Header() {
               className="w-full h-full object-contain"
               quality={100}
               priority={true}
+              sizes="(max-width: 768px) 256px, (max-width: 1024px) 352px, 448px"
             />
           </div>
         </Link>

@@ -21,10 +21,10 @@ export function Interest() {
 
         {/* DMs e Comentários Grid */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <Image src={people1Img} alt="Comentário" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
-          <Image src={people2Img} alt="Comentário" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
-          <Image src={people3Img} alt="Comentário" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
-          <Image src={people4Img} alt="Comentário" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
+          <Image src={people1Img} alt="Comentário" sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
+          <Image src={people2Img} alt="Comentário" sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
+          <Image src={people3Img} alt="Comentário" sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
+          <Image src={people4Img} alt="Comentário" sizes="(max-width: 768px) 100vw, 50vw" className="rounded-2xl border border-white/10 shadow-xl opacity-90 hover:opacity-100 hover:scale-[1.02] transition-all duration-300 w-full h-auto object-cover" />
         </div>
 
         {/* Estatísticas Virais */}
