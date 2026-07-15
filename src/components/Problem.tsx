@@ -25,14 +25,13 @@ export function Problem() {
             
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p className="text-xl">
-                É frustrante. Você <span className="text-white font-semibold">entende textos, assiste séries e estuda há anos</span>. Mas na hora H, a palavra foge. O sotaque pesa. E o medo de errar paralisa.
+                Durante muito tempo, eu acreditava que para aprender inglês por meio de uma verdadeira imersão cultural <span className="text-white font-semibold">seria necessário sair do Brasil</span>, morar em outro país e me afastar da minha família.
               </p>
               <p className="text-xl leading-relaxed">
-                Durante muito tempo eu achei normal estudar, pagar caro em cursinhos e ainda sentir que minha fala <span className="text-white font-semibold">nunca acompanhava meu esforço</span>.
-                Só depois que mudei minha abordagem para <span className="text-[#FFB800] font-bold">imersão diária</span> percebi que o problema não era minha capacidade.
+                Mas a realidade é que você não precisa cruzar o oceano. Depois de muito tentar, percebi que é perfeitamente possível <span className="text-[#FFB800] font-bold">criar uma imersão cultural de forma autodidata</span>, dentro do seu próprio quarto e em qualquer lugar do mundo.
               </p>
               <p className="text-xl">
-                O mercado está cheio de <strong className="text-red-400 font-bold">métodos ultrapassados</strong>. Focados em gramática infinita, repetição robótica, e aquela sensação constante de que você <span className="text-white font-bold">nunca vai soar natural.</span>
+                O mercado está cheio de <strong className="text-red-400 font-bold">métodos ultrapassados</strong>. Eles fazem você acreditar que precisa focar anos em gramática infinita e repetição robótica antes de conseguir se comunicar de verdade.
               </p>
               <div className="p-8 bg-slate-800/50 border border-slate-700/50 rounded-xl shadow-lg">
                 <p className="text-yellow-300 font-bold text-2xl leading-relaxed">

@@ -15,7 +15,7 @@ export function Interest() {
             A necessidade real das pessoas
           </h2>
           <p className="text-xl text-slate-400 font-light">
-            Quando compartilhei como destravei o meu inglês, não imaginava que tantas pessoas passavam pelo mesmo bloqueio.
+            Quando compartilhei como aprendi inglês do zero e sozinha, não imaginava que tantas pessoas passavam pelas mesmas dificuldades.
           </p>
         </div>
 

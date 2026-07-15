@@ -30,7 +30,7 @@ export function Hero() {
             </h1>
             
             <p className="text-lg md:text-xl lg:text-lg xl:text-xl text-slate-400 mb-6 xl:mb-10 leading-relaxed max-w-xl font-light">
-              O método prático para quem já entende inglês, mas trava na hora de abrir a boca. Aprenda técnicas de imersão diária e <em>shadowing</em> para falar com segurança.
+              O método prático para quem quer começar do zero ou para quem já entende inglês, mas trava na hora de abrir a boca. Aprenda técnicas de imersão diária e <em>shadowing</em> para falar com segurança.
             </p>
 
             <div className="flex flex-col w-full sm:w-auto gap-4">

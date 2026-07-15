@@ -12,16 +12,16 @@ export function Bonus() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Acesso Premium aos Bônus</h2>
-          <p className="text-lg text-slate-400 font-light">O guia é a base. O ecossistema é o que garante sua execução.</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Bônus especial para os primeiros compradores</h2>
+          <p className="text-lg text-slate-400 font-light">O e-book é a base. Mas os bônus são os aceleradores do seu aprendizado.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {[
-            { icon: <Users />, title: "Grupo Exclusivo", desc: "Networking com pessoas buscando trabalho internacional" },
-            { icon: <MessageSquare />, title: "Sala de Inglês", desc: "Prática de conversação focada em entrevistas" },
-            { icon: <FileText />, title: "Checklist", desc: "Passo a passo do que revisar antes de se candidatar" },
-            { icon: <Globe2 />, title: "Plataformas", desc: "Sites usados para vagas internacionais além do LinkedIn" }
+            { icon: <FileText />, title: "Checklist 30 Dias", desc: "Marque cada passo e não perca o ritmo." },
+            { icon: <Globe2 />, title: "Guia de Algoritmo", desc: "Transforme redes sociais em máquinas de estudo." },
+            { icon: <Users />, title: "Criadores Gringos", desc: "Curadoria pronta para consumir conteúdo real." },
+            { icon: <MessageSquare />, title: "Acesso Exclusivo", desc: "Condição especial no Grupo de Conversação do WhatsApp." }
           ].map((bonus, i) => (
             <div 
               key={i} 

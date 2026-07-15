@@ -11,7 +11,7 @@ export function WhoIsThisFor() {
             A pergunta que mais recebo é simples: <br /> <span className="text-[#FFB800]">"Mas esse método funciona para mim?"</span>
           </h2>
           <p className="text-lg text-slate-400 font-medium">
-            E a minha resposta é: <span className="text-[#FFB800]">"Você já entende inglês mas trava na hora de falar?"</span>
+            E a minha resposta é: <span className="text-[#FFB800]">"Funciona tanto para quem está começando do zero, quanto para quem já entende mas trava na hora de falar."</span>
           </p>
         </div>
 
@@ -24,11 +24,11 @@ export function WhoIsThisFor() {
             </div>
             <ul className="space-y-3 md:space-y-4 mt-4">
               {[
-                "Já entende inglês mas trava na hora de falar",
-                "Tem vergonha do próprio sotaque",
+                "Quer aprender inglês do absoluto zero",
+                "Já entende mas trava na hora de falar",
                 "Precisa de inglês para crescer na carreira",
-                "Não quer pagar cursinhos caros",
-                "Quer destravar a fala por conta própria"
+                "Quer criar uma imersão sem sair do Brasil",
+                "Quer aprender de forma totalmente autodidata"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#FFB800] shrink-0" />
