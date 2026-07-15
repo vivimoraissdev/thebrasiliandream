@@ -36,11 +36,11 @@ export function Hero() {
             <div className="flex flex-col w-full sm:w-auto gap-4">
               <CheckoutButton 
                 sectionName="hero"
-                className="group relative px-8 py-5 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 overflow-hidden shadow-[0_0_40px_rgba(255,184,0,0.3)] hover:shadow-[0_0_60px_rgba(255,184,0,0.5)] transform hover:-translate-y-1"
+                className="group relative px-4 sm:px-8 py-4 sm:py-5 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-xl transition-all duration-300 text-[15px] sm:text-lg flex items-center justify-center overflow-hidden shadow-[0_0_40px_rgba(255,184,0,0.3)] hover:shadow-[0_0_60px_rgba(255,184,0,0.5)] transform hover:-translate-y-1 w-full sm:w-auto"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  QUERO DESTRAVAR MINHA FALA
-                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10 flex items-center justify-center gap-2 text-center w-full">
+                  <span>QUERO DESTRAVAR MINHA FALA</span>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
               </CheckoutButton>
