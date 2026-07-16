@@ -1,0 +1,1 @@
+export const isPromotionActive = true;

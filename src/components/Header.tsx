@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckoutButton } from './CheckoutButton';
+import { isPromotionActive } from '../config/campaign';
 import logoImg from '../assets/thebra$iliandream-logo-horizontal.png';
 
 export function Header() {
@@ -25,7 +26,7 @@ export function Header() {
             sectionName="header"
             className="hidden md:inline-flex px-8 lg:px-10 py-3 lg:py-4 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(255,184,0,0.3)] hover:shadow-[0_0_30px_rgba(255,184,0,0.5)] transform hover:-translate-y-1 text-base lg:text-lg"
           >
-            QUERO O EBOOK
+            {isPromotionActive ? "QUERO O COMBO" : "QUERO O EBOOK"}
           </CheckoutButton>
         </div>
       </div>

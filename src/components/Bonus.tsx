@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
-import { Users, MessageSquare, FileText, Globe2, ChevronDown } from 'lucide-react';
+import { Gift, Target, MessageSquare, FileText, Video, Users, Zap } from 'lucide-react';
+import { FlipClock } from './FlipClock';
 
 export function Bonus() {
-  const [openBonus, setOpenBonus] = useState<number | null>(null);
 
   return (
     <section id="bonus" className="flex flex-col justify-center py-16 bg-[#0B1220] border-b border-white/5 relative overflow-hidden">
@@ -16,36 +13,45 @@ export function Bonus() {
           <p className="text-lg text-slate-400 font-light">O e-book é a base. Mas os bônus são os aceleradores do seu aprendizado.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {[
-            { icon: <FileText />, title: "Checklist 30 Dias", desc: "Marque cada passo e não perca o ritmo." },
-            { icon: <Globe2 />, title: "Guia de Algoritmo", desc: "Transforme redes sociais em máquinas de estudo." },
-            { icon: <Users />, title: "Criadores Gringos", desc: "Curadoria pronta para consumir conteúdo real." },
-            { icon: <MessageSquare />, title: "Acesso Exclusivo", desc: "Condição especial no Grupo de Conversação do WhatsApp." }
-          ].map((bonus, i) => (
-            <div 
-              key={i} 
-              onClick={() => setOpenBonus(openBonus === i ? null : i)}
-              className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-4 md:p-6 lg:p-8 rounded-2xl hover:border-white/20 transition-all cursor-pointer md:cursor-default"
-            >
-              <div className="flex items-center justify-between w-full md:w-auto">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#071426] border border-white/10 rounded-xl flex items-center justify-center shrink-0">
-                    <div className="text-[#FFB800]">{bonus.icon}</div>
-                  </div>
-                  <h4 className="text-lg font-bold text-white md:hidden">{bonus.title}</h4>
-                </div>
-                <div className="md:hidden">
-                  <ChevronDown className={`w-5 h-5 text-[#FFB800] transition-transform duration-300 ${openBonus === i ? 'rotate-180' : ''}`} />
-                </div>
-              </div>
-              
-              <div className={`w-full md:w-auto mt-2 md:mt-0 transition-all duration-300 overflow-hidden ${openBonus === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 md:max-h-none md:opacity-100'}`}>
-                <h4 className="hidden md:block text-xl font-bold text-white mb-2">{bonus.title}</h4>
-                <p className="text-slate-400 font-medium text-sm md:text-base leading-relaxed">{bonus.desc}</p>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#071426] to-transparent border border-[#FFB800]/20 p-6 md:p-10 rounded-3xl relative overflow-hidden">
+          {/* Decorative glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFB800]/10 blur-[100px] rounded-full pointer-events-none"></div>
+          
+          <h3 className="text-2xl md:text-3xl font-extrabold text-[#FFB800] mb-8 flex items-center gap-3">
+            <Gift className="w-6 h-6 md:w-8 md:h-8 shrink-0" /> Comunidade Imersão Brazilian — O que você vai viver em 30 dias:
+          </h3>
+          
+          <ul className="space-y-4 text-slate-300 font-medium text-lg md:text-xl leading-relaxed relative z-10">
+            <li className="flex items-start gap-3">
+              <Target className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Encontros semanais ao vivo</strong> com a Victoria para praticar conversação.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <MessageSquare className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Grupo exclusivo no WhatsApp</strong> com interação diária e suporte direto.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <FileText className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Feedback personalizado</strong> sobre sua pronúncia, fluência e gramática.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Video className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Acesso às gravações</strong> de todas as sessões para revisar quando quiser.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Users className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Networking de alto nível</strong> com outros alunos focados no mesmo objetivo.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Zap className="w-6 h-6 mt-0.5 shrink-0 text-[#FFB800]" />
+              <span><strong className="text-white">Correções em tempo real</strong> e direcionamento prático durante as sessões ao vivo.</span>
+            </li>
+          </ul>
+
+          <div className="mt-8 mb-4 border-t border-white/10 pt-8 relative z-10 flex flex-col items-center">
+            <h4 className="text-[#FFB800] font-bold text-lg md:text-xl text-center mb-2">A oferta especial se encerra em:</h4>
+            <FlipClock />
+          </div>
         </div>
       </div>
     </section>

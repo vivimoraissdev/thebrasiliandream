@@ -1,5 +1,6 @@
 
 import { CheckoutButton } from './CheckoutButton';
+import { isPromotionActive } from '../config/campaign';
 
 export function CTA() {
   return (
@@ -21,7 +22,7 @@ export function CTA() {
             sectionName="final"
             className="inline-flex px-12 py-6 bg-[#FFB800] hover:bg-[#E6A600] text-[#0B1220] font-extrabold rounded-2xl transition-all duration-300 text-xl items-center justify-center shadow-[0_0_50px_rgba(255,184,0,0.3)] hover:shadow-[0_0_80px_rgba(255,184,0,0.5)] transform hover:-translate-y-1"
           >
-            QUERO O EBOOK
+            {isPromotionActive ? "QUERO O COMBO" : "QUERO O EBOOK"}
           </CheckoutButton>
         </div>
       </div>

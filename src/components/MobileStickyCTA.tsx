@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { CheckoutButton } from './CheckoutButton';
+import { isPromotionActive } from '../config/campaign';
 
 export function MobileStickyCTA() {
   const [showStickyCta, setShowStickyCta] = useState(false);
@@ -26,7 +27,7 @@ export function MobileStickyCTA() {
         sectionName="sticky_mobile"
         className="w-full block text-center py-4 bg-[#FFB800] text-[#0B1220] font-bold rounded-xl shadow-lg cursor-pointer hover:bg-[#E6A600] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,184,0,0.3)] transition-all duration-300"
       >
-        QUERO ACESSO AGORA
+        {isPromotionActive ? "QUERO O COMBO" : "QUERO O EBOOK"}
       </CheckoutButton>
     </div>
   );
