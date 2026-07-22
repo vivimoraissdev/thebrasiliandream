@@ -38,8 +38,5 @@ yarn-error.log*
 next-env.d.ts
 AGENTS.md
 
-# node
-package-lock.json
-
 # env
 .env
