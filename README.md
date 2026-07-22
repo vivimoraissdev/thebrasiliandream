@@ -1,40 +1,40 @@
 # The Brazilian Dream
 
-Landing page e backend de automação comercial do The Brazilian Dream. A aplicação é publicada na Vercel e integra Cakto, Supabase, Resend e o serviço `whatsapp-bot-brasiliandream`.
+The Brazilian Dream landing page and sales automation backend. The application is deployed on Vercel and integrates with Cakto, Supabase, Resend, and the `whatsapp-bot-brasiliandream` service.
 
-## Responsabilidades
+## Responsibilities
 
-- Exibir a landing page e encaminhar visitantes ao checkout.
-- Receber e validar webhooks da Cakto.
-- Persistir o período efetivo de acesso à comunidade no Supabase.
-- Enviar e-mails transacionais e alertas operacionais pelo Resend.
-- Executar a rotina diária de aviso, expiração e remoção.
-- Auditar participantes dos grupos por meio da API do bot.
+- Display the landing page and direct visitors to checkout.
+- Receive and validate Cakto webhooks.
+- Persist the effective community access period in Supabase.
+- Send transactional emails and operational alerts through Resend.
+- Run the daily notification, expiration, and removal routine.
+- Audit group participants through the bot API.
 
-## Regras de acesso
+## Access rules
 
-| Produto | Acesso aos grupos |
+| Product | Group access |
 |---|---:|
-| Comunidade Imersão | 4 meses |
-| Combo Completo | 1 mês |
-| Extensão de Comunidade | +4 meses |
-| E-book | Nenhum acesso |
+| Immersion Community | 4 months |
+| Complete Bundle | 1 month |
+| Community Extension | +4 months |
+| E-book | No access |
 
-A compra isolada do e-book não cria acesso à comunidade. O e-mail final de encerramento só é enviado depois que a remoção do participante tiver sido confirmada.
+Purchasing the e-book by itself does not grant community access. The final access-ended email is sent only after the participant's removal has been confirmed.
 
 ## Stack
 
-- Next.js 16 e React 19
+- Next.js 16 and React 19
 - TypeScript
 - Tailwind CSS 4
 - Supabase
 - Resend
 - Vitest
-- Vercel e Vercel Cron
+- Vercel and Vercel Cron
 
-## Desenvolvimento local
+## Local development
 
-Requisitos: Node.js 20 ou superior e npm.
+Requirements: Node.js 20 or later and npm.
 
 ```bash
 npm install
@@ -42,33 +42,33 @@ copy .env.example .env.local
 npm run dev
 ```
 
-Em macOS ou Linux, substitua o segundo comando por `cp .env.example .env.local`.
+On macOS or Linux, replace the second command with `cp .env.example .env.local`.
 
-Não use o prefixo `NEXT_PUBLIC_` nas chaves do Supabase, Cakto, Resend, cron ou bot. Essas variáveis são exclusivas do servidor.
+Do not use the `NEXT_PUBLIC_` prefix for Supabase, Cakto, Resend, cron, or bot keys. These variables are server-only.
 
-## Variáveis de ambiente
+## Environment variables
 
-Use [`.env.example`](./.env.example) como contrato. As variáveis estão agrupadas por integração:
+Use [`.env.example`](./.env.example) as the contract. The variables are grouped by integration:
 
-- Bot: `BOT_SERVER_URL` e `BOT_SECRET`.
-- Rotinas protegidas: `CRON_SECRET`, `ADMIN_AUDIT_SECRET`, `ADMIN_NUMBERS` e `AUDIT_MAX_REMOVALS`.
+- Bot: `BOT_SERVER_URL` and `BOT_SECRET`.
+- Protected routines: `CRON_SECRET`, `ADMIN_AUDIT_SECRET`, `ADMIN_NUMBERS`, and `AUDIT_MAX_REMOVALS`.
 - Cakto: `CAKTO_WEBHOOK_SECRET`.
-- Resend: `RESEND_API_KEY`, `RESEND_FROM_EMAIL` e `ADMIN_ALERT_EMAIL`.
-- Supabase: `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`.
+- Resend: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ADMIN_ALERT_EMAIL`.
+- Supabase: `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`.
 
-`BOT_SECRET` e `ADMIN_NUMBERS` devem permanecer compatíveis com a configuração do bot.
+`BOT_SECRET` and `ADMIN_NUMBERS` must remain compatible with the bot configuration.
 
-## Comandos
+## Commands
 
-| Comando | Finalidade |
+| Command | Purpose |
 |---|---|
-| `npm run dev` | Servidor local com recarregamento. |
-| `npm run typecheck` | Verificação estática do TypeScript. |
-| `npm test` | Testes automatizados com Vitest. |
-| `npm run build` | Build de produção do Next.js. |
-| `npm start` | Execução do build de produção. |
+| `npm run dev` | Start the local development server with hot reload. |
+| `npm run typecheck` | Run TypeScript static type checking. |
+| `npm test` | Run automated tests with Vitest. |
+| `npm run build` | Create the production Next.js build. |
+| `npm start` | Run the production build. |
 
-Antes de concluir alterações, execute:
+Before completing changes, run:
 
 ```bash
 npm run typecheck
@@ -76,55 +76,55 @@ npm test
 npm run build
 ```
 
-## Estrutura principal
+## Main structure
 
 ```text
 src/
-|-- app/                  # páginas e rotas HTTP
-|-- components/           # componentes da landing page
-|-- config/               # ambiente, produtos e limites administrativos
-|-- data/                 # acesso ao Supabase
-|-- domain/               # regras puras e testes
-|-- lib/bot/              # cliente HTTP do bot
-|-- lib/email/            # cliente e templates de e-mail
-`-- utils/                # segurança, concorrência e Supabase
-supabase/migrations/      # schema e políticas do banco
-docs/                     # documentação operacional
+|-- app/                  # pages and HTTP routes
+|-- components/           # landing page components
+|-- config/               # environment, products, and administrative limits
+|-- data/                 # Supabase access
+|-- domain/               # pure business rules and tests
+|-- lib/bot/              # bot HTTP client
+|-- lib/email/            # email client and templates
+`-- utils/                # security, concurrency, and Supabase utilities
+supabase/migrations/      # database schema and policies
+docs/                     # operational documentation
 ```
 
-## Rotas de backend
+## Backend routes
 
-| Método e rota | Finalidade |
+| Method and route | Purpose |
 |---|---|
-| `POST /api/webhooks/cakto` | Validar e processar eventos da Cakto com idempotência. |
-| `GET /api/cron/check-access` | Avisar, remover acessos expirados e enviar o e-mail final. |
-| `GET /api/admin/audit-group` | Gerar auditoria protegida sem remover participantes. |
-| `POST /api/admin/audit-group` | Executar remoção protegida após os limites de segurança. |
+| `POST /api/webhooks/cakto` | Validate and process Cakto events idempotently. |
+| `GET /api/cron/check-access` | Send notifications, remove expired access, and send the final email. |
+| `GET /api/admin/audit-group` | Generate a protected audit without removing participants. |
+| `POST /api/admin/audit-group` | Perform protected removal after applying the safety limits. |
 
-Consulte [docs/whatsapp-automation-backend.md](./docs/whatsapp-automation-backend.md) para regras detalhadas, migração, segurança e ordem de implantação.
+See [docs/whatsapp-automation-backend.md](./docs/whatsapp-automation-backend.md) for detailed rules, migration, security, and deployment order.
 
-## Integração com o bot
+## Bot integration
 
-Este projeto é o orquestrador de negócio. O bot é o adaptador do WhatsApp e expõe `GET /health`, `GET /participants` e `POST /remove`.
+This project is the business logic orchestrator. The bot is the WhatsApp adapter and exposes `GET /health`, `GET /participants`, and `POST /remove`.
 
-A ordem recomendada de implantação é:
+The recommended deployment order is:
 
-1. Implantar o bot e validar a conexão.
-2. Aplicar a migração do Supabase.
-3. Configurar as variáveis da Vercel e do Resend.
-4. Implantar esta aplicação.
-5. Validar webhooks, cron e auditoria com dados controlados.
+1. Deploy the bot and validate the connection.
+2. Apply the Supabase migration.
+3. Configure the Vercel and Resend variables.
+4. Deploy this application.
+5. Validate webhooks, cron, and auditing with controlled data.
 
-## Orquestração de agentes
+## Agent orchestration
 
-O repositório possui instruções versionadas para Codex e Antigravity:
+The repository includes version-controlled instructions for Codex and Antigravity:
 
-- [`AGENTS.md`](./AGENTS.md): arquitetura, limites de segurança, regras comerciais e critérios de conclusão para o Codex.
-- [`.agents/rules/repository.md`](./.agents/rules/repository.md): regras permanentes equivalentes para o Antigravity.
-- [`.agents/workflows/validate.md`](./.agents/workflows/validate.md): workflow sob demanda para typecheck, testes e build.
+- [`AGENTS.md`](./AGENTS.md): architecture, safety limits, business rules, and completion criteria for Codex.
+- [`.agents/rules/repository.md`](./.agents/rules/repository.md): equivalent permanent rules for Antigravity.
+- [`.agents/workflows/validate.md`](./.agents/workflows/validate.md): an on-demand workflow for type checking, tests, and builds.
 
-Mudanças no contrato do bot devem ser coordenadas com `whatsapp-bot-brasiliandream`. Um único agente pode escrever neste repositório por etapa; explorações, revisões e validações independentes podem ser delegadas em paralelo.
+Changes to the bot contract must be coordinated with `whatsapp-bot-brasiliandream`. Only one agent may write to this repository at each stage; independent exploration, review, and validation may be delegated in parallel.
 
-## Branch de integração
+## Integration branch
 
-O desenvolvimento integrado dos dois projetos ocorre na branch `staging`.
+Integrated development across both projects takes place on the `staging` branch.
