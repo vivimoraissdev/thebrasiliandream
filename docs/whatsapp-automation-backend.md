@@ -53,8 +53,9 @@ Execution order:
 3. Remove every expired/refunded/chargebacked access that has not been removed yet.
 4. Mark successful removals as `removed`.
 5. Send final e-mails only to records already marked `removed`.
+6. Audit live group membership and remove unauthorized participants, subject to `AUDIT_MAX_REMOVALS`.
 
-Failed final e-mails remain eligible on later runs. Failed removals remain eligible because the query selects all expirations before the current UTC day, not only yesterday.
+Failed final e-mails remain eligible on later runs. Failed removals remain eligible because the query selects all expirations before the current UTC day, not only yesterday. Phones already selected by the normal lifecycle-removal flow are excluded from the automatic audit, so a successful removal is always persisted before its final e-mail is sent.
 
 ### `GET /api/admin/audit-group`
 

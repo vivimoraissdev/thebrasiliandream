@@ -34,4 +34,5 @@ export const BotParticipantsResponseSchema = z.object({
 });
 
 export type BotRemoveResponse = z.infer<typeof BotRemoveResponseSchema>;
+export type BotRemovalResult = z.infer<typeof BotRemovalResultSchema>;
 export type BotParticipantsResponse = z.infer<typeof BotParticipantsResponseSchema>;
