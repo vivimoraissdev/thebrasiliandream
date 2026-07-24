@@ -13,6 +13,7 @@ import { startOfUtcDay, utcDayWindow } from '@/domain/date';
 import { getPhoneComparisonKey, getPhoneVariants, normalizePhone } from '@/domain/phone';
 import { checkBotHealth, removePhones } from '@/lib/bot/client';
 import { sendBotDownAlert, sendFinalEmail, sendWarningEmail } from '@/lib/email/client';
+import { runGroupAudit } from '@/lib/group-audit';
 import type { CustomerRecord } from '@/types/customer';
 import { settleInBatches } from '@/utils/concurrency';
 import { hasValidBearerToken } from '@/utils/security';
@@ -177,6 +178,23 @@ export async function GET(request: Request): Promise<Response> {
 
     const finalEmailSummary = await sendPendingFinalEmails();
 
+    let unauthorizedAudit: Awaited<ReturnType<typeof runGroupAudit>> | { skippedReason: string } = {
+      skippedReason: 'not_run',
+    };
+    try {
+      unauthorizedAudit = await runGroupAudit({
+        executeRemoval: true,
+        validAccessPhones: validAccessCustomers.map((customer) => customer.phone),
+        adminPhones: getAdminNumbers(),
+        deferRemovalPhones: [...candidatesByPhone.values()].map((candidate) => candidate.phone),
+      });
+    } catch (error) {
+      console.error('unauthorized_participant_audit_failed', {
+        error: error instanceof Error ? error.name : 'UnknownError',
+      });
+      unauthorizedAudit = { skippedReason: 'audit_threw_unexpectedly' };
+    }
+
     return Response.json({
       status: 'completed',
       heartbeatPassed: true,
@@ -186,6 +204,7 @@ export async function GET(request: Request): Promise<Response> {
       evictionsFailed: evictionFailures,
       finalEmailsSent: finalEmailSummary.sent,
       finalEmailsFailed: finalEmailSummary.failed,
+      unauthorizedAudit,
     });
   } catch (error) {
     console.error('check_access_cron_failed', {
