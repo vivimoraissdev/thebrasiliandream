@@ -58,9 +58,23 @@ async function sendPendingFinalEmails(): Promise<{ sent: number; failed: number 
     await markFinalEmailSent(customer.id);
   });
 
-  return {
+  const failed = results.filter((result) => result.status === 'rejected');
+  for (const result of failed) {
+    console.error('final_email_send_failed', {
+      error: result.reason instanceof Error ? result.reason.name : 'UnknownError',
+    });
+  }
+
+  const summary = {
+    candidates: customers.length,
     sent: results.filter((result) => result.status === 'fulfilled').length,
-    failed: results.filter((result) => result.status === 'rejected').length,
+    failed: failed.length,
+  };
+  console.info('final_email_dispatch_summary', summary);
+
+  return {
+    sent: summary.sent,
+    failed: summary.failed,
   };
 }
 
@@ -204,6 +218,19 @@ export async function GET(request: Request): Promise<Response> {
         });
       }
     }
+
+    console.info('check_access_cron_completed', {
+      warningsSent: warningSummary.sent,
+      warningsFailed: warningSummary.failed,
+      evictionsSucceeded,
+      evictionsFailed: evictionFailures.length,
+      finalEmailsSent: finalEmailSummary.sent,
+      finalEmailsFailed: finalEmailSummary.failed,
+      auditUnauthorizedFound: 'unauthorizedFound' in unauthorizedAudit
+        ? unauthorizedAudit.unauthorizedFound
+        : 0,
+      auditSkippedReason: unauthorizedAudit.skippedReason ?? null,
+    });
 
     return Response.json({
       status: 'completed',
