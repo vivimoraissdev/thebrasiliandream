@@ -70,3 +70,14 @@ export async function sendBotDownAlert(now = new Date()): Promise<void> {
     idempotencyParts: ['bot-down', utcDate],
   });
 }
+
+export async function sendAuditFailureAlert(reason: string, now = new Date()): Promise<void> {
+  const utcDate = now.toISOString().slice(0, 10);
+  await sendEmail({
+    to: requireEnv('ADMIN_ALERT_EMAIL'),
+    subject: 'URGENTE: auditoria automática de participantes não concluída',
+    text: `A auditoria diária de participantes não autorizados não removeu ninguém nesta execução (motivo: ${reason}). Verifique o bot, o Supabase e/ou AUDIT_MAX_REMOVALS.`,
+    html: `<p><strong>A auditoria diária de participantes não autorizados não removeu ninguém nesta execução.</strong></p><p>Motivo: ${reason}</p><p>Verifique o bot, o Supabase e/ou AUDIT_MAX_REMOVALS.</p>`,
+    idempotencyParts: ['audit-failure', reason, utcDate],
+  });
+}

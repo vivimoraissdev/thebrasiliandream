@@ -12,7 +12,7 @@ import {
 import { startOfUtcDay, utcDayWindow } from '@/domain/date';
 import { getPhoneComparisonKey, getPhoneVariants, normalizePhone } from '@/domain/phone';
 import { checkBotHealth, removePhones } from '@/lib/bot/client';
-import { sendBotDownAlert, sendFinalEmail, sendWarningEmail } from '@/lib/email/client';
+import { sendAuditFailureAlert, sendBotDownAlert, sendFinalEmail, sendWarningEmail } from '@/lib/email/client';
 import { runGroupAudit } from '@/lib/group-audit';
 import type { CustomerRecord } from '@/types/customer';
 import { settleInBatches } from '@/utils/concurrency';
@@ -186,13 +186,23 @@ export async function GET(request: Request): Promise<Response> {
         executeRemoval: true,
         validAccessPhones: validAccessCustomers.map((customer) => customer.phone),
         adminPhones: getAdminNumbers(),
-        deferRemovalPhones: [...candidatesByPhone.values()].map((candidate) => candidate.phone),
       });
     } catch (error) {
       console.error('unauthorized_participant_audit_failed', {
         error: error instanceof Error ? error.name : 'UnknownError',
       });
       unauthorizedAudit = { skippedReason: 'audit_threw_unexpectedly' };
+    }
+
+    const auditSkippedReason = unauthorizedAudit.skippedReason;
+    if (auditSkippedReason && auditSkippedReason !== 'not_run') {
+      try {
+        await sendAuditFailureAlert(auditSkippedReason, now);
+      } catch (error) {
+        console.error('audit_failure_alert_failed', {
+          error: error instanceof Error ? error.name : 'UnknownError',
+        });
+      }
     }
 
     return Response.json({
@@ -210,6 +220,15 @@ export async function GET(request: Request): Promise<Response> {
     console.error('check_access_cron_failed', {
       error: error instanceof Error ? error.name : 'UnknownError',
     });
+    try {
+      await sendAuditFailureAlert(
+        `cron_failed_${error instanceof Error ? error.name : 'UnknownError'}`,
+      );
+    } catch (alertError) {
+      console.error('audit_failure_alert_failed', {
+        error: alertError instanceof Error ? alertError.name : 'UnknownError',
+      });
+    }
     return Response.json({ error: 'internal error' }, { status: 500 });
   }
 }
